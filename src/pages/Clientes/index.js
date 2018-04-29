@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 })
 
 
-class CenaClientes extends Component {
+class Clientes extends Component {
   static navigationOptions = {
     title: 'Clientes',
     headerMode: 'none',
@@ -60,4 +60,4 @@ class CenaClientes extends Component {
   }
 }
 
-export default CenaClientes;
+export default Clientes;

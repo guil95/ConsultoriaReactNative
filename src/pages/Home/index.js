@@ -24,7 +24,8 @@ const menuCliente = require('../../assets/img/menu_cliente.png')
 const menuContato = require('../../assets/img/menu_contato.png')
 const menuEmpresa = require('../../assets/img/menu_empresa.png')
 const menuServico = require('../../assets/img/menu_servico.png')
-class CenaPrincipal extends Component {
+
+class Home extends Component {
   static navigationOptions = {
     title: 'Atm Consultoria'
   }
@@ -41,15 +42,27 @@ class CenaPrincipal extends Component {
         <View style={styles.menu}>
           <View style={styles.menuGrupo}>
             <TouchableOpacity
-              onPress = {() => { navigate('CenaClientes')}} 
+              onPress = {() => { navigate('Clientes')}} 
             >
-             <Image style={styles.imgmenu} source={menuCliente}/>
-             </TouchableOpacity>
-            <Image style={styles.imgmenu} source={menuContato}/>
+              <Image style={styles.imgmenu} source={menuCliente}/>
+              </TouchableOpacity>
+             <TouchableOpacity
+              onPress = {() => { navigate('Contato')}} 
+            >
+              <Image style={styles.imgmenu} source={menuContato}/>
+            </TouchableOpacity>
           </View>
           <View style={styles.menuGrupo}>
-            <Image style={styles.imgmenu} source={menuEmpresa}/>
-            <Image style={styles.imgmenu} source={menuServico}/>
+            <TouchableOpacity
+                onPress = {() => { navigate('SobreNos')}} 
+              >
+                <Image style={styles.imgmenu} source={menuEmpresa}/>
+            </TouchableOpacity>
+            <TouchableOpacity
+                onPress = {() => { navigate('Servicos')}} 
+              >
+             <Image style={styles.imgmenu} source={menuServico}/>
+            </TouchableOpacity>
           </View>
 
         </View>
@@ -59,4 +72,4 @@ class CenaPrincipal extends Component {
   }
 }
 
-export default CenaPrincipal;
+export default Home;
