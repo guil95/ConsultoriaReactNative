@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StatusBar, Image,StyleSheet  } from 'react-native';
+import { View, Text, StatusBar, Image,StyleSheet, ScrollView  } from 'react-native';
 
 import BarraNavegacao from '../../components/BarraNavegacao'
 
@@ -33,12 +33,17 @@ const styles = StyleSheet.create({
 class Clientes extends Component {
   static navigationOptions = {
     title: 'Clientes',
-    headerMode: 'none',
-    cardStyle: { backgroundColor: 'transparent'}
+    headerStyle: {
+      backgroundColor: '#b9c941',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold'
+    },
   }
   render() {
     return (
-      <View style={{height: '100%', backgroundColor: '#FFF'}}>
+      <ScrollView style={{height: '100%', backgroundColor: '#FFF'}}>
           <StatusBar
             backgroundColor= '#b9c941'
             barStyle="light-content"
@@ -55,7 +60,7 @@ class Clientes extends Component {
             <Image source={cliente2} />
             <Text style={styles.txtDetalhesCliente}>Cliente 2</Text>
           </View>
-      </View>
+      </ScrollView>
     );
   }
 }

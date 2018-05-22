@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
-import { View, Text, StatusBar, Image,StyleSheet  } from 'react-native';
+import { View, Text, StatusBar, Image,StyleSheet, ScrollView } from 'react-native';
 
 
 class SobreNos extends Component {
   static navigationOptions = {
-    title: 'Sobre nós'
+    title: 'Sobre nós',
+    headerStyle: {
+      backgroundColor: '#ec7148',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold'
+    },
   }
   render() {
     return (
-      <View style={{height: '100%', backgroundColor: '#FFF'}}>
+      <ScrollView style={{height: '100%', backgroundColor: '#FFF'}}>
          <Text>SobreNos</Text>
-      </View>
+      </ScrollView>
     );
   }
 }

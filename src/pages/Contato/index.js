@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
-import { View, Text, StatusBar, Image,StyleSheet  } from 'react-native';
+import { View, Text, StatusBar, Image,StyleSheet, ScrollView  } from 'react-native';
 
 
 class Contato extends Component {
   static navigationOptions = {
-    title: 'Contato'
+    title: 'Contato',
+    headerStyle: {
+      backgroundColor: '#61bd8c',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold'
+    },
   }
   render() {
     return (
-      <View style={{height: '100%', backgroundColor: '#FFF'}}>
+      <ScrollView style={{height: '100%', backgroundColor: '#FFF'}}>
          <Text>Contato</Text>
-      </View>
+      </ScrollView>
     );
   }
 }

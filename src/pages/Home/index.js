@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StatusBar, Image, StyleSheet, TouchableOpacity  } from 'react-native';
+import { View, Text, StatusBar, Image, StyleSheet, TouchableOpacity, ScrollView  } from 'react-native';
 import BarraNavegacao from '../../components/BarraNavegacao'
 
 const styles =  StyleSheet.create({
@@ -27,12 +27,20 @@ const menuServico = require('../../assets/img/menu_servico.png')
 
 class Home extends Component {
   static navigationOptions = {
-    title: 'Atm Consultoria'
+    title: 'ATM Consultoria',
+    headerStyle: {
+      backgroundColor: '#ccc',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold'
+    },
+  
   }
   render() {
     const {navigate} = this.props.navigation
     return (
-      <View style={{backgroundColor: '#FFF', height: '100%'}}>
+      <ScrollView style={{backgroundColor: '#FFF', height: '100%'}}>
           <StatusBar
              backgroundColor="#ccc"
           />
@@ -46,7 +54,7 @@ class Home extends Component {
             >
               <Image style={styles.imgmenu} source={menuCliente}/>
               </TouchableOpacity>
-             <TouchableOpacity
+            <TouchableOpacity
               onPress = {() => { navigate('Contato')}} 
             >
               <Image style={styles.imgmenu} source={menuContato}/>
@@ -67,7 +75,7 @@ class Home extends Component {
 
         </View>
         
-      </View>
+      </ScrollView>
     );
   }
 }

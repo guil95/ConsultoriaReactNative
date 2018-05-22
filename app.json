@@ -1,5 +1,21 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+    "sdkVersion": "27.0.0",
+    "name": "Consultoria ARM",
+    "description": "Aplicativo empresarial desenvolvido para estudos",
+    "version": "1.0.0",
+    "slug": "",
+    "icon": "./icon/logo.png",
+    "splash": {
+      "image": "./icon/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFF"
+    },
+    "ios": {
+      "bundleIdentifier": "com.hive.consultoriaarm"
+    },
+    "android": {
+      "package": "com.hive.consultoriaarm"
+    }
   }
 }
